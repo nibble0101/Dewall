@@ -1,0 +1,9 @@
+body{
+    background-color: #eee;
+    font-family: serif;
+}
+.btn{
+    margin: 1em;
+    white-space: nowrap;
+}
+
