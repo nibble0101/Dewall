@@ -5,7 +5,12 @@ if (document.body.classList.contains('modal-open')) {
 const modal = document.querySelector('.modal.show.fade.ng-isolate-scope.ev.ev-open-modal-paywall-REQUIRE_LOGIN.in');
 if (modal) {
     modal.remove();
-}
+};
+
+const adLeaderboardWrap = document.querySelector('.ad-leaderboard_wrap');
+if(adLeaderboardWrap){
+    adLeaderboardWrap.remove();
+};
 
 const modalBackdrop = document.querySelectorAll('.modal-backdrop.fade.in');
 modalBackdrop.forEach(modalBackdropElement => {
@@ -41,3 +46,12 @@ iframes.forEach(iframe => {
     iframe.remove();
 });
 
+const youMayAlsoLikeAdWrapper = document.querySelector("#taboola-below-article-thumbnails1");
+if (youMayAlsoLikeAdWrapper) {
+    youMayAlsoLikeAdWrapper.remove();
+};
+
+const bottomScrollingAd = document.querySelector('#tbl-next-up');
+if (bottomScrollingAd) {
+    bottomScrollingAd.remove();
+};
