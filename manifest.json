@@ -14,12 +14,24 @@
         }
     },
     "background": {
-        "service_worker": "src/background.js"
+        "service_worker": "src/js/background.js"
     },
     "permissions": [
         "activeTab",
         "scripting",
         "declarativeContent"
     ],
-    "homepage_url": "https://github.com/nibble0101/Dewall"
+    "homepage_url": "https://github.com/nibble0101/Dewall",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.monitor.co.ug/*"
+            ],
+            "js": [
+
+                "src/js/remove-paywall-and-ads.js",
+                "src/js/print-document.js"
+            ]
+        }
+    ]
 }
