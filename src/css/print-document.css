@@ -1,0 +1,27 @@
+@media print {
+    .page-grid-header{
+        display: none;
+    }
+    section.page-content.detail-content{
+        padding-top: 0;
+    }
+
+    section.page-content{
+        margin-top: 0;
+    }
+
+    .page-footer{
+        display: none;
+    }
+    section.teasers-row{
+        display: none;
+    }
+    aside.promotion-banner.color-set-color-5{
+        display: none;
+    }
+
+    aside ul.social-share-list{
+       display: none;
+    }
+   
+}
