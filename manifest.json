@@ -19,6 +19,7 @@
     "permissions": [
         "activeTab",
         "scripting",
+        "tabs",
         "declarativeContent"
     ],
     "homepage_url": "https://github.com/nibble0101/Dewall",
