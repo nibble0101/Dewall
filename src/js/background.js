@@ -1,3 +1,6 @@
+const baseUrl = 'https://www.monitor.co.ug/';
+
+
 chrome.runtime.onInstalled.addListener(() => {
     chrome.action.disable();
 
@@ -12,4 +15,19 @@ chrome.runtime.onInstalled.addListener(() => {
         }
         chrome.declarativeContent.onPageChanged.addRules([rule]);
     })
+})
+
+// Adds a badge when the browser is pointed to https://www.monitor.co.ug/
+// Find a better way of doing this
+
+chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+    const { url } = tab;
+    if (url.startsWith(baseUrl)) {
+        chrome.action.setBadgeText({ text: 'ON', tabId }, () => {
+        })
+        chrome.action.setBadgeBackgroundColor({ color: 'green', tabId }, () => {
+        })
+    }else{
+
+    }
 })
